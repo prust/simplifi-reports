@@ -1,11 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <title>Simplifi Reports</title>
+  <title>BTC Salt Reports</title>
   <style>
     body { margin: 1em }
-    .neg { color: red }
+    table { border-collapse: collapse}
+    th {
+      background-color: #eee;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    td { width: 85px }
+    table td,th { border: 1px solid #ccc; padding: 5px}
     .amt { text-align: right }
+    th.category { text-align: left; margin-left: 1em; white-space: nowrap}
+    th.sidebar { text-align: left }
+    th.separator { height: 8px }
     #filedrag {
       font-weight: bold;
       text-align: center;
@@ -24,19 +34,13 @@
       box-shadow: inset 0 3px 4px #888;
     }
   </style>
-  <script src="csv.js"></script>
   <script src="underscore.js"></script>
 </head>
 <body>
-  <h3>Quicken Simplifi Reports</h3>
-  <div>
-  Current Year
-  </div>
-  <!--div id="charts">
-  </div-->
+  <h3>2024-2025 - BTC Salt</h3>
   <div id="report">
   </div>
-  <div id="filedrag">Drop CSV files here</div>
+  <div id="filedrag">Drop JSON file here</div>
   <script src="simplifi-reports.js"></script>
 </body>
 </html>
